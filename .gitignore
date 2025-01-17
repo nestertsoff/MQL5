@@ -1,0 +1,40 @@
+/.vscode
+
+# Ignore compiled files
+*.ex5
+*.ex4
+
+# Ignore MetaTrader logs and terminal files
+/Logs/
+/MQL5/Terminal/
+/MQL5/Cache/
+*/Examples/
+
+/Experts/Free Robots
+
+# Ignore config and settings files
+/MQL5/Config/
+/MQL5/Profiles/
+/MQL5/History/
+/MQL5/Terminal.ini
+/MQL5/Settings.ini
+
+# Ignore backups
+/MQL5/Experts/~Backup/
+/MQL5/Indicators/~Backup/
+/MQL5/Scripts/~Backup/
+/MQL5/Libraries/~Backup/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.old
+
+# Ignore DS_Store (macOS)
+.DS_Store
+
+# Ignore Thumbs.db (Windows)
+Thumbs.db
+
+# Ignore any unnecessary system files
+desktop.ini
