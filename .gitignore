@@ -38,3 +38,6 @@ Thumbs.db
 
 # Ignore any unnecessary system files
 desktop.ini
+/Profiles/*
+
+experts.dat

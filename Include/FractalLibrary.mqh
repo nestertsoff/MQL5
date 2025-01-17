@@ -392,7 +392,7 @@ void GenerateFractals(const double &high[], const double &low[],
    ArrayResize(filtered, 0);
 
    // 10.2) Ищем ST-фракталы (бычьи и медвежьи)
-   for (int i = start; i < rates_total - 1; i++)
+   for (int i = start; i < rates_total - 2; i++)
    {
       if (IsFractal(true, high[i - 1], high[i], high[i + 1]))
          AddFractal(Sth, high[i], time[i], i, fractals);
