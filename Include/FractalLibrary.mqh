@@ -173,7 +173,13 @@ void FilterOpposite(const Fractal &primary[], const Fractal &opposite[],
       int oppositeSize = ArraySize(opposite);
       for (int j = 0; j < oppositeSize; j++)
       {
-         if (opposite[j].Time <= candidate.Time && opposite[j].Time >= primary[i].Time)
+         if(opposite[j].Time == primary[i].Time)
+         {
+            foundOpposite = true;
+            break;
+         }
+
+         if (opposite[j].Time < candidate.Time && opposite[j].Time > primary[i].Time)
          {
             foundOpposite = true;
             break;
