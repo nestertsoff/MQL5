@@ -35,6 +35,64 @@
     }
   ],
   "paths": {
+    "/open-chart": {
+      "get": {
+        "tags": [
+          "chart"
+        ],
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Symbol name (e.g., EURUSD)"
+          },
+          {
+            "name": "timeframe",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "description": "Timeframe (e.g., PERIOD_M1 = 1, PERIOD_H1 = 60)"
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "summary": "Open a chart for the specified symbol and timeframe",
+        "operationId": "openChart",
+        "description": "This endpoint opens a chart for a given symbol and timeframe in the MetaTrader 5 terminal.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Chart opened successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "example": "success"
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Chart for EURUSD on H1 timeframe opened successfully."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input parameters"
+          },
+          "500": {
+            "description": "Failed to open chart"
+          }
+        }
+      }
+    },
     "/candles": {
       "get": {
         "tags": [
